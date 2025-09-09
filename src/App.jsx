@@ -36,7 +36,7 @@ export default function App() {
     <div className="container">
       <h1>✨ TO DO List ✨</h1>
 
-      <div className="kpis~">
+      <div className="kpis">
         <div className="kpi">
           <div className="num">{total}</div>
           <div>المجموع</div>
@@ -65,7 +65,10 @@ export default function App() {
       ) : (
         <div className="list">
           {todos.map((todo) => (
-            <div className={item ${todo.animate ? "fade-in" : ""}} key={todo.id}>
+            <div
+              className={`item ${todo.animate ? "fade-in" : ""}`}
+              key={todo.id}
+            >
               <label>
                 <input
                   type="checkbox"
@@ -79,6 +82,6 @@ export default function App() {
           ))}
         </div>
       )}
-    </div>
-  );
+    </div>
+  );
 }
